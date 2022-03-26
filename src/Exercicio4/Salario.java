@@ -12,16 +12,8 @@ public class Salario {
     public Salario(double salarioBase, double taxa) {
         this.salarioBase = salarioBase;
         this.taxa = taxa;
-        this.comissao = CalcularComissao(salarioBase, taxa);
-        this.salarioTotal = CalcularSalarioTotal(this.comissao);
-    }
-
-    private double CalcularSalarioTotal(double comissao) {
-        return this.salarioBase + comissao;
-    }
-
-    private double CalcularComissao(double salarioBase, double taxa) {
-        return (salarioBase * taxa) / 100;
+        this.comissao = CalcularSalario.CalcularComissao(salarioBase, taxa);
+        this.salarioTotal = CalcularSalario.CalcularSalarioTotal(salarioBase, this.comissao);
     }
 
     public void setSalarioBase(double salarioBase) {
