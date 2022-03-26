@@ -1,0 +1,1 @@
+codigo que apresenta erro na IDE vscode.
